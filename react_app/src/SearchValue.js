@@ -13,17 +13,25 @@ const ProductTable = () => {
         return cats.map((cats) => <li>{cats}</li>)
     }
 
+    //Finds one cat from the list
     const searchBar = (event) => {
         setSearch(event.target.value);
         
         for (let cat of cats) {
-            if (event.target.value === cat) {
+            if (event.target.value.toLowerCase() === cat.toLowerCase()) {
                 return setResult(cat);
             }
         }
-        setResult("error");
+        setResult("Exact cat not found");
     }
     
+    //Finds several cats in the list
+    const filtered = [];
+
+    for (let cat of cats) {
+        if (cat.toLowerCase().startsWith(search.toLowerCase())) filtered.push(cat);
+    }
+
     return (
         <>
             <h3>Cats:</h3>
@@ -31,7 +39,8 @@ const ProductTable = () => {
             <br/>
             <label>Search:</label>
             <input name="search" type="text" value={search} onChange={searchBar}/><br/>
-            <p>Result: {result}</p>
+            <p>Single Cat Result: {result}</p><br/>
+            <p>Multiple Cats Result: {filtered.map(filtered => <li>{filtered}</li>)}</p>
         </>
     )
 }
