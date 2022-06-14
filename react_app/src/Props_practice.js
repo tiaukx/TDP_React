@@ -13,7 +13,7 @@ const PropPractice = ({name, age, likes}) => {
 export default PropPractice;
 
 PropPractice.propTypes = {
-    name: propTypes.string.isRequired,
-    age: propTypes.number.isRequired,
-    likes: propTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    age: PropTypes.number.isRequired,
+    likes: PropTypes.string.isRequired,
 }
