@@ -3,6 +3,7 @@ import './App.css';
 // import CustomerDetails from './CustomerForm';
 // import AddressApp from './address';
 import Header from './Header';
+import ProductTable from './SearchValue';
 // import MilesAhead from './MilesAhead';
 // import Clock from './Clock';
 // import AnotherComponent from './Footer';
@@ -21,6 +22,8 @@ function App() {
       <Clock/> */}
       {/* <CustomerDetails/> */}
       {/* <CarDetails/> */}
+
+      <ProductTable/>
 
     </div>
   );
