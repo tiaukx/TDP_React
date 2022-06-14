@@ -1,4 +1,4 @@
-import {useState} from 'React';
+import { useState } from 'react';
 
 const MilesAhead = () => {
     const [steps, setSteps] = useState(0);

@@ -1,7 +1,10 @@
 import './App.css';
+// import CarDetails from './CarComponents';
+// import CustomerDetails from './CustomerForm';
 // import AddressApp from './address';
 import Header from './Header';
-import MilesAhead from './MilesAhead';
+// import MilesAhead from './MilesAhead';
+// import Clock from './Clock';
 // import AnotherComponent from './Footer';
 // import PropPractice from './Props_practice';
 
@@ -14,7 +17,10 @@ function App() {
       <PropPractice name="Mickey" age={5} likes="Belly rubs" dislikes="Moogle's tail"/>
       <AnotherComponent/> */}
 
-      <MilesAhead/>
+      {/* <MilesAhead/>
+      <Clock/> */}
+      {/* <CustomerDetails/> */}
+      {/* <CarDetails/> */}
 
     </div>
   );
