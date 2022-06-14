@@ -1,4 +1,5 @@
 import './App.css';
+// import Counter from './Counter';
 // import CarDetails from './CarComponents';
 // import CustomerDetails from './CustomerForm';
 // import AddressApp from './address';
@@ -24,6 +25,8 @@ function App() {
       {/* <CarDetails/> */}
 
       <ProductTable/>
+
+      {/* <Counter/> */}
 
     </div>
   );
