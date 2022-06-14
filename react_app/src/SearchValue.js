@@ -8,6 +8,11 @@ const ProductTable = () => {
     const [search, setSearch] = useState("");
     const [result, setResult] = useState("");
 
+    const printArray = () => {
+        //Loops through cats array and returns a p tag for each element in the array
+        return cats.map((cats) => <li>{cats}</li>)
+    }
+
     const searchBar = (event) => {
         setSearch(event.target.value);
         
@@ -16,18 +21,16 @@ const ProductTable = () => {
                 return setResult(cat);
             }
         }
-
         setResult("error");
     }
     
     return (
         <>
             <h3>Cats:</h3>
-            <p name="array">{cats}</p>
-
+            {printArray()}
+            <br/>
             <label>Search:</label>
             <input name="search" type="text" value={search} onChange={searchBar}/><br/>
-
             <p>Result: {result}</p>
         </>
     )
