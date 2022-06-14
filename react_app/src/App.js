@@ -10,8 +10,8 @@ function App() {
       <Header/>
       <AddressApp/>
       
-      <PropPractice name="Moogle" age={6} likes="Cable ties"/>
-      <PropPractice name="Mickey" age={5} likes="Belly rubs"/>
+      <PropPractice name="Moogle" age={6} likes="Cable ties" dislikes="Mickey"/>
+      <PropPractice name="Mickey" age={5} likes="Belly rubs" dislikes="Moogle's tail"/>
 
       <AnotherComponent/>
     </div>
