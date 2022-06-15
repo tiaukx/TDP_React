@@ -5,7 +5,9 @@ import './App.css';
 // import CustomerDetails from './CustomerForm';
 // import AddressApp from './address';
 import Header from './Header';
-import HigherFunctionPractice from './HigherFunctionPractice';
+import SubContent from './SubContent';
+// import Content from './ReactStaticDataPractice';
+// import HigherFunctionPractice from './HigherFunctionPractice';
 // import ProductTable from './SearchValue';
 // import MilesAhead from './MilesAhead';
 // import Clock from './Clock';
@@ -17,7 +19,8 @@ function App() {
     <div className="App">
       <Header/>
 
-      <HigherFunctionPractice/>
+      {/* <Content/> */}
+      <SubContent/>
 
     </div>
   );
