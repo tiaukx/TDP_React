@@ -7,9 +7,12 @@ const LoginControl = () => {
 
     const [isloggedIn, setIsLoggedIn] = useState(false);
 
+    let button = (isloggedIn) ? <LogoutButton onClick={() => setIsLoggedIn(false)}/> : <LoginButton onClick={() => setIsLoggedIn(true)}/>
+
     return (
         <>
-
+            <Greeting isloggedIn={isloggedIn}/>
+            {button}
         </>
     )
 
