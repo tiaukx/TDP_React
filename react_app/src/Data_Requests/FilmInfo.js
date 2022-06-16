@@ -1,7 +1,7 @@
 const FilmInfo = (props) => {
     
     const {Title, Year, Rated, Genre, Plot, Poster} = props;
-    
+
     return (
         <>
                 <h2>{Title}</h2>
