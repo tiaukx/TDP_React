@@ -1,15 +1,13 @@
 import './App.css';
+import EmployeeInfo from './Data_Requests/Employee_Info';
 import Header from './Header';
-
-import LoginControl from './Login_Control_Exercise/LoginControl';
-
 
 function App() {
   return (
     <div className="App">
       <Header/>
 
-      <LoginControl/>
+      <EmployeeInfo/>
 
     </div>
   );
