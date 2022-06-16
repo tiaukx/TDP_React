@@ -20,13 +20,19 @@ const FilmRequest = () => {
             return <FilmInfo key={Title + Year} Title={Title} Year={Year} Rated={Rated} Genre={Genre} Plot={Plot} Poster={Poster}/>
         }
     }
+
+    //updates the API key value
     const updateApiKey = (event) => {
         //ignores null values
         event.preventDefault();
+        //uses input value to set the API key
         setApiKey(event.target.value);
     }
+
+    //updates film title value
     const updateTitle = (event) => {
         event.preventDefault();
+        //uses input value to set the film title
         setFilmTitle(event.target.value);
     }
 
@@ -49,12 +55,16 @@ const FilmRequest = () => {
             <fieldset>
                 <h2>Film Request</h2>
                 <p>Enter API Key:</p>
-                <input type='text' onChange={(event)=>updateApiKey(event)}/>
+                {/* when changed (as user types) calls the function that changes the API key */}
+                <input type='text' onChange={(event)=>updateApiKey(event)}/>    
                 <p>Enter name of film:</p>
+                                {/* when changed (as user types) calls the function that changes the film title */}
                 <input type='text' onChange={(event)=>updateTitle(event)}/>
 
+                {/* when clicked calls the function that requests the data from the API */}
                 <button onClick={(event)=>makeRequest(event)}>Search</button>
 
+                {/* renders the film details when request is made */}
                 {render()}
 
             </fieldset>
