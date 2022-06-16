@@ -1,5 +1,5 @@
 import './App.css';
-import EmployeeInfo from './Data_Requests/Employee_Info';
+import FilmRequest from './Data_Requests/FilmRequest';
 import Header from './Header';
 
 function App() {
@@ -7,7 +7,7 @@ function App() {
     <div className="App">
       <Header/>
 
-      <EmployeeInfo/>
+      <FilmRequest/>
 
     </div>
   );
