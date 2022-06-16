@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { useState } from 'react';
+import FilmInfo from './FilmInfo';
 
 
 const FilmRequest = () => {
@@ -39,13 +40,7 @@ const FilmRequest = () => {
 
                 <button onClick={(event)=>makeRequest(event)}>Search</button>
 
-                <h2>{Title}</h2>
-                <p>Year: {Year}</p>
-                <p>Rated: {Rated}</p>
-                <p>Genre: {Genre}</p>
-                <p>{Plot}</p>
-                <img src={Poster} alt='The poster'></img>
-
+                <FilmInfo key={Title + Year} Title={Title} Year={Year} Rated={Rated} Genre={Genre} Plot={Plot} Poster={Poster}/>
             </fieldset>
         </>
     )
