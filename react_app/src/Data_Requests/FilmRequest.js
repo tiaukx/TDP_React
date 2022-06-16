@@ -26,25 +26,27 @@ const FilmRequest = () => {
             })
     };
 
+    const {Title, Year, Rated, Genre, Plot, Poster} = data;
+
     return (
         <>
-            <div>
+            <fieldset>
                 <h2>Film Request</h2>
                 <p>Enter API Key:</p>
                 <input type='text' onChange={(event)=>updateApiKey(event)}/>
                 <p>Enter name of film:</p>
                 <input type='text' onChange={(event)=>updateTitle(event)}/>
 
-                <button onClick={(event)=>makeRequest(event)}>Make Request</button>
+                <button onClick={(event)=>makeRequest(event)}>Search</button>
 
-                <h2>{data.Title}</h2>
-                <p>{data.Year}</p>
-                <p>{data.Rated}</p>
-                <p>{data.Genre}</p>
-                <p>{data.Plot}</p>
-                <img src={data.Poster} alt='The poster'></img>
+                <h2>{Title}</h2>
+                <p>Year: {Year}</p>
+                <p>Rated: {Rated}</p>
+                <p>Genre: {Genre}</p>
+                <p>{Plot}</p>
+                <img src={Poster} alt='The poster'></img>
 
-            </div>
+            </fieldset>
         </>
     )
 
