@@ -8,7 +8,15 @@ const FilmRequest = () => {
     const [data, setData] = useState("");
     const [apiKey, setApiKey] = useState("");
     const [filmTitle, setFilmTitle] = useState("");
+    const [request, setRequest] = useState(false);
 
+    const {Title, Year, Rated, Genre, Plot, Poster} = data;
+
+    const render = () => {
+        if (request) {
+            return <FilmInfo key={Title + Year} Title={Title} Year={Year} Rated={Rated} Genre={Genre} Plot={Plot} Poster={Poster}/>
+        }
+    }
     const updateApiKey = (event) => {
         event.preventDefault();
         setApiKey(event.target.value);
@@ -24,10 +32,9 @@ const FilmRequest = () => {
             .then(response => {
                 console.log(response.data);
                 setData(response.data);
+                setRequest(true);
             })
     };
-
-    const {Title, Year, Rated, Genre, Plot, Poster} = data;
 
     return (
         <>
@@ -40,7 +47,8 @@ const FilmRequest = () => {
 
                 <button onClick={(event)=>makeRequest(event)}>Search</button>
 
-                <FilmInfo key={Title + Year} Title={Title} Year={Year} Rated={Rated} Genre={Genre} Plot={Plot} Poster={Poster}/>
+                {render()}
+
             </fieldset>
         </>
     )
