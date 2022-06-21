@@ -19,6 +19,7 @@ function App() {
           <Route exact path ="/" element={<Home/>}/>
           <Route exact path ="/Contact" element={<Contact/>}/>
           <Route exact path ="/Users" element={<Users/>}/>
+          <Route exact path ="/Users/:id" element={<Users/>}/>
           <Route path = "*" element={<NotFound/>}/>
         </Routes>
       </BrowserRouter>
